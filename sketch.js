@@ -54,7 +54,7 @@ var render = Render.create({ element: document.body, engine: engine, options: { 
 function draw() {
   rectMode(CENTER);
   
-  background("white");
+  background("blue");
   Engine.update(engine);
 
   
@@ -109,7 +109,7 @@ stoneBodyPosition=lstone.body.position
 mangoBodyPosition=lmango.body.position
 
 var distance = dist(stoneBodyPosition.x,stoneBodyPosition.y,mangoBodyPosition.x,mangoBodyPosition.y)
-if(distance<=lmango.r+lstone.r)
+if(distance<=lmango.width+lstone.width)
 {
 Matter.Body.setStatic(lmango.body,false)
 
